@@ -6,7 +6,9 @@ A modern web application built with Node.js and Express, ready for GitHub Codesp
 
 - Express.js server with REST API endpoints
 - Modern, responsive frontend with HTML/CSS/JavaScript
+- Rate limiting for security (100 requests per 15 minutes per IP)
 - GitHub Codespaces ready with devcontainer configuration
+- Prettier for code formatting
 - Simple and clean project structure for easy extension
 
 ## 📋 Prerequisites
@@ -90,6 +92,18 @@ app.get('/api/your-endpoint', (req, res) => {
 - Edit `public/index.html` for structure
 - Edit `public/styles.css` for styling
 - Edit `public/app.js` for client-side functionality
+
+### Rate Limiting
+
+The application includes rate limiting to prevent abuse:
+- Default: 100 requests per 15 minutes per IP address
+- Customize in `index.js` by modifying the `limiter` configuration
+
+## 🔒 Security Features
+
+- Rate limiting to prevent API abuse
+- Express security best practices
+- Static file serving from dedicated public directory
 
 ## 🤝 Contributing
 
